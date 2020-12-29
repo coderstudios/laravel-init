@@ -3,7 +3,7 @@
     "description": "Bootstrap Laravel 8+",
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "~5.4"
+        "illuminate/support": "^8.0|^9.0"
     },
     "authors": [
         {
