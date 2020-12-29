@@ -15,7 +15,7 @@
  * @see       https://www.coderstudios.com
  */
 
-namespace CoderStudios\LaravelInit;
+namespace CoderStudios\LaravelInit\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;

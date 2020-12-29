@@ -15,7 +15,7 @@
  * @see       https://www.coderstudios.com
  */
 
-namespace CoderStudios\LaravelInit;
+namespace CoderStudios\LaravelInit\Commands;
 
 use CoderStudios\LaravelInit\Libraries\EmailGroupsLibrary;
 use CoderStudios\LaravelInit\Libraries\LanguageLibrary;

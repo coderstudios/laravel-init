@@ -15,7 +15,7 @@
  * @see       https://www.coderstudios.com
  */
 
-namespace CoderStudios\LaravelInit;
+namespace CoderStudios\LaravelInit\Commands;
 
 use App;
 use Artisan;

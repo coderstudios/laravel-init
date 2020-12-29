@@ -15,7 +15,7 @@
  * @see       https://www.coderstudios.com
  */
 
-namespace CoderStudios\LaravelInit;
+namespace CoderStudios\LaravelInit\Commands;
 
 use DB;
 use Illuminate\Console\Command;
