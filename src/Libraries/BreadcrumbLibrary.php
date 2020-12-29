@@ -17,7 +17,7 @@
 
 namespace CoderStudios\LaravelInit\Libraries;
 
-class BreadCrumbLibrary
+class BreadcrumbLibrary
 {
     protected $items = [];
 
