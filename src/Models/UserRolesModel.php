@@ -18,12 +18,10 @@
 namespace CoderStudios\LaravelInit\Models;
 
 use CoderStudios\LaravelInit\Traits\ScopeEnabled;
-use CoderStudios\LaravelInit\Traits\SetEnabledAttribute;
 use Illuminate\Database\Eloquent\Model;
 
 class UserRolesModel extends Model
 {
-    use SetEnabledAttribute;
     use ScopeEnabled;
 
     /**
