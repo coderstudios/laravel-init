@@ -71,7 +71,7 @@ class LaravelInitServiceProvider extends ServiceProvider
     protected function configure()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../../config/laravelinit.php',
+            __DIR__.'/../config/laravelinit.php',
             'laravelinit'
         );
     }
