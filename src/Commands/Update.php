@@ -19,6 +19,7 @@ namespace CoderStudios\LaravelInit\Commands;
 
 use App;
 use Artisan;
+use Cache;
 use Illuminate\Console\Command;
 
 class Update extends Command
