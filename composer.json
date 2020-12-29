@@ -1,0 +1,28 @@
+{
+    "name": "coderstudios/laravel-init",
+    "description": "Bootstrap Laravel 8+",
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "~5.4"
+    },
+    "authors": [
+        {
+            "name": "Coder Studios",
+            "email": "thedevelopers@coderstudios.com"
+        }
+    ],
+    "keywords": [  
+        "bootstrap",
+        "laravel",
+        "coderstudios"
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CoderStudios\\LaravelInit\\LaravelInitServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
