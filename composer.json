@@ -19,7 +19,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "CoderStudios\\LaravelInit\\": "src/CoderStudios/LaravelInit/"
+            "CoderStudios\\LaravelInit\\": "src/"
         }
     },
     "extra": {
