@@ -20,7 +20,6 @@ namespace CoderStudios\LaravelInit\Commands;
 use App;
 use Artisan;
 use Illuminate\Console\Command;
-use Illuminate\Contracts\Cache\Factory as Cache;
 
 class Update extends Command
 {
@@ -39,15 +38,6 @@ class Update extends Command
     protected $description = 'Update package views and assets and clear the cache';
 
     /**
-     * Create a new command instance.
-     */
-    public function __construct(Cache $cache)
-    {
-        parent::__construct();
-        $this->cache = $cache->store(config('cache.default'));
-    }
-
-    /**
      * Execute the console command.
      *
      * @return mixed
@@ -59,7 +49,7 @@ class Update extends Command
             Artisan::call('vendor:publish', ['--tag' => 'public', '--force' => true]);
             Artisan::call('vendor:publish', ['--tag' => 'views', '--force' => true]);
         }
-        $this->cache->flush();
+        Cache::flush();
         $this->info('Cache cleared succesfully');
     }
 }

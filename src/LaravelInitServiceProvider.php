@@ -31,12 +31,14 @@ class LaravelInitServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
         $this->publishes([
-            __DIR__.'/../../../config/laravelinit.php' => config_path('laravelinit.php'),
+            __DIR__.'/../config/laravelinit.php' => config_path('laravelinit.php'),
         ], 'config');
 
+        /*
         $this->publishes([
             __DIR__.'/../../../resources/assets' => resource_path('vendor/laravelinit'),
         ], 'resources');
+        */
 
         $this->publishes([
             __DIR__.'/database/migrations' => database_path('/migrations'),

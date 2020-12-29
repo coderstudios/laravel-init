@@ -43,11 +43,27 @@ class Reset extends Command
      */
     public function handle()
     {
-        DB::table('users')->truncate();
-        DB::table('settings')->truncate();
-        DB::table('user_roles')->truncate();
-        DB::table('email_groups')->truncate();
-        DB::table('languages')->truncate();
+        $this->info('Resetting the Laravel Init data tables (drop and re-create)...');
+        $answer = $this->ask('Do you want to empty the users table? Y/N');
+        if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
+            DB::table('users')->truncate();
+        }
+        $answer = $this->ask('Do you want to empty the settings table? Y/N');
+        if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
+            DB::table('settings')->truncate();
+        }
+        $answer = $this->ask('Do you want to empty the user roles table? Y/N');
+        if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
+            DB::table('user_roles')->truncate();
+        }
+        $answer = $this->ask('Do you want to empty the email groups table? Y/N');
+        if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
+            DB::table('email_groups')->truncate();
+        }
+        $answer = $this->ask('Do you want to empty the languages table? Y/N');
+        if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
+            DB::table('languages')->truncate();
+        }
         $this->call('csinit:install');
     }
 }

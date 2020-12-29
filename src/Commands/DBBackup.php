@@ -18,6 +18,7 @@
 namespace CoderStudios\LaravelInit\Commands;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 
 class DBBackup extends Command
@@ -51,9 +52,9 @@ class DBBackup extends Command
      */
     public function handle()
     {
-        $process = new Process('');
         $default_config = sprintf('database.connections.%s', config('database.default'));
         $db = config($default_config);
+
         if (!is_dir(config('laravelinit.coderstudios.backup_dir'))) {
             mkdir(config('laravelinit.coderstudios.backup_dir'));
         }
@@ -68,7 +69,12 @@ class DBBackup extends Command
             $db['database'],
             $path
         );
-        $process->setCommandLine($command);
+
+        $process = Process::fromShellCommandline($command);
         $process->run();
+
+        if (!$process->isSuccessful()) {
+            throw new ProcessFailedException($process);
+        }
     }
 }

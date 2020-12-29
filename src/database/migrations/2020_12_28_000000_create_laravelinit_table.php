@@ -19,7 +19,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class LaravelInitTables extends Migration
+class CreateLaravelInitTable extends Migration
 {
     /**
      * Run the migrations.
@@ -177,7 +177,7 @@ class LaravelInitTables extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('enabled')->default(0)->index()->after('id');
             $table->integer('user_role_id')->index()->default(1)->after('id');
-            $table->string('username')->unique()->after('email');
+            $table->string('username')->nullable()->after('email');
         });
     }
 
