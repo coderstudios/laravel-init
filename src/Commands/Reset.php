@@ -50,19 +50,19 @@ class Reset extends Command
         }
         $answer = $this->ask('Do you want to empty the settings table? Y/N');
         if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
-            DB::table('settings')->truncate();
+            DB::table('cs_settings')->truncate();
         }
         $answer = $this->ask('Do you want to empty the user roles table? Y/N');
         if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
-            DB::table('user_roles')->truncate();
+            DB::table('cs_user_roles')->truncate();
         }
         $answer = $this->ask('Do you want to empty the email groups table? Y/N');
         if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
-            DB::table('email_groups')->truncate();
+            DB::table('cs_email_groups')->truncate();
         }
         $answer = $this->ask('Do you want to empty the languages table? Y/N');
         if ('yes' === strtolower($answer) || 'y' === strtolower($answer)) {
-            DB::table('languages')->truncate();
+            DB::table('cs_languages')->truncate();
         }
         $this->call('csinit:install');
     }
