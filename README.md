@@ -1,7 +1,7 @@
 Laravel Init
 ==========
 
-A package in PHP for use with a Laravel 8+ project.
+A package in PHP for use with a Laravel 8+ project. Recommended to be used with a clean fresh install of Laravel. 
 
 ## Composer
 
@@ -37,4 +37,4 @@ Example update composer.json file
 
 ## Copyright and Licence
 
-CSCMS has been written by Coder Studios Ltd
+Laravel Init has been written by Coder Studios Ltd
